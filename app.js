@@ -240,7 +240,7 @@ function Home({p, go, update}){
     {k:'playlist', n:'Revision Mixes', s:'Shuffle your knowledge', d:'Warm-ups, case law, exam level and your mistakes.', ic:'list-music'},
   ];
   return html`<div class="home">
-    ${COURSE_META.notesLoaded ? html`<div class="notice"><b>Loaded from your UWC notes:</b> ${COURSE_META.loaded.join(' · ')}. Every answer links back to the slide it came from. <button class="linkish" onClick=${()=>go('course')}>What’s included</button></div>` : html`<div class="notice"><b>Course Notes Not Yet Loaded.</b> Demo content only. <button class="linkish" onClick=${()=>go('course')}>How updates work</button></div>`}
+    ${COURSE_META.notesLoaded ? html`<div class="notice"><b>Loaded from your UWC notes:</b> ${COURSE_META.loaded.join(' · ')}. Every answer links back to its source (slide or guide section). <button class="linkish" onClick=${()=>go('course')}>What’s included</button></div>` : html`<div class="notice"><b>Course Notes Not Yet Loaded.</b> Demo content only. <button class="linkish" onClick=${()=>go('course')}>How updates work</button></div>`}
     <section class="hero">
       <div class="herotxt"><div class="kicker">${greet}${p.name?', '+p.name:''}</div>
         <h1>Study the law. <em>Play the game.</em> Win the case.</h1>
@@ -280,7 +280,7 @@ function Home({p, go, update}){
 
 /* ---------- LAWFLIX ---------- */
 function Lawflix({p, go}){
-  return html`<div class="page"><div class="pagehead"><div class="kicker">Episodes</div><h1>Unit 3, as a series</h1><p>Each part of Unit 3 is a season. Each key section of the notes is an episode. Pick one and press play.</p></div>
+  return html`<div class="page"><div class="pagehead"><div class="kicker">Episodes</div><h1>Units 2 and 3, as a series</h1><p>Each part of a unit is a season. Each key section of the notes is an episode. Pick one and press play.</p></div>
     ${TOPICS.map(t=>html`<section class="season"><div class="seasonhead"><h2>Season ${t.season}: ${t.name}</h2>${t.status==='demo'&&html`<${Demo}/>`}</div><p class="fine">${t.summary}</p>
       <div class="eprow">${SUBTOPICS.filter(s=>s.topicId===t.id).map(s=>html`<button class=${'epcard l-'+t.look} onClick=${()=>go('episode',{sub:s.id})}>
         <span class="epnum"><${Ic} n="play" s=${14}/> E${s.ep}</span><b>${s.name}</b><span class="fine">${s.episode.coldOpen.slice(0,90)}…</span>
@@ -290,7 +290,7 @@ function Lawflix({p, go}){
 function Season({p, go, topic}){ const t=topicById(topic);
   return html`<div class="page"><div class="pagehead"><div class="kicker">Season ${t.season} <${Demo}/></div><h1>${t.name}</h1><p>${t.summary}</p></div>
     <div class="eprow">${SUBTOPICS.filter(s=>s.topicId===t.id).map(s=>html`<div class=${'epcard static l-'+t.look}><span class="epnum">E${s.ep}</span><b>${s.name}</b>
-      <ul class="outcomes">${s.outcomes.map(o=>html`<li>${o}</li>`)}</ul><span class="fine">Source: ${s.source.doc}, ${s.source.loc} · UWC lecture slides</span>
+      <ul class="outcomes">${s.outcomes.map(o=>html`<li>${o}</li>`)}</ul><span class="fine">Source: ${s.source.doc}, ${s.source.loc} · ${s.source.via || 'UWC lecture slides'}</span>
       <div class="row"><${Btn} kind="primary" onClick=${()=>go('episode',{sub:s.id})}>Play<//><${MasteryPill} m=${masteryOf(p,s.id)}/></div></div>`)}</div></div>`;
 }
 
@@ -388,7 +388,7 @@ function MysteryRun({m, p, update, chill, onExit}){
 /* ---------- SHOP ---------- */
 function Shop({p, update, go}){
   const [sid, setSid] = useState(null);
-  if(!sid) return html`<div class="page"><div class="pagehead"><div class="kicker">Authority Cart</div><h1>Shop for your authorities</h1><p>Each brief is a client problem from Unit 3. Add exactly the sections, cases, principles and facts it needs. Distractors look tempting.</p></div>
+  if(!sid) return html`<div class="page"><div class="pagehead"><div class="kicker">Authority Cart</div><h1>Shop for your authorities</h1><p>Each brief is a client problem from Units 2 and 3. Add exactly the sections, cases, principles and facts it needs. Distractors look tempting.</p></div>
     <div class="files">${SHOP.map(s=>html`<button class="shopcard" onClick=${()=>setSid(s.id)}><span class="kicker">Brief <${Demo}/></span><b>${s.title}</b><span class="fine">${s.items.length} items in store${p.shop[s.id]?' · best '+p.shop[s.id].best+' pts':''}</span></button>`)}</div></div>`;
   return html`<${ShopRun} s=${SHOP.find(x=>x.id===sid)} p=${p} update=${update} onExit=${()=>setSid(null)}/>`;
 }
@@ -584,7 +584,7 @@ function Playlist({p, update, chill}){
       <ol class="tracks">${t.map((q,k)=>html`<li><span class="tn">${k+1}</span><span class="tt"><b>${subById(q.sub).name}</b><span class="fine">${TYPE_LABEL[q.type]} · ${LEVELS[q.level]}</span></span><span class="fine">${p.items[q.id]?(p.items[q.id].lastWrong?'missed':'played'):''}</span></li>`)}</ol>
       ${!t.length && html`<p>No tracks yet. ${pl.special==='wrong'?'Nothing answered wrong so far.':'Answer a few questions first.'}</p>`}
       <${Btn} kind="ghost" onClick=${()=>setPl(null)}>All playlists<//></div>`; }
-  return html`<div class="page"><div class="pagehead"><div class="kicker">Revision Mixes</div><h1>Shuffle your knowledge</h1><p>Pick a mix. Each track is a question from Unit 3.</p></div>
+  return html`<div class="page"><div class="pagehead"><div class="kicker">Revision Mixes</div><h1>Shuffle your knowledge</h1><p>Pick a mix. Each track is a question from Units 2 and 3.</p></div>
     <div class="playlists">${PLAYLISTS.map(l=>html`<button class="plcard" onClick=${()=>setPl(l)}><div class=${'cover c-'+l.cover}><span>${l.name}</span></div><b>${l.name}</b><span class="fine">${l.mood} · ${tracks(l).length} tracks</span></button>`)}</div></div>`;
 }
 
@@ -620,7 +620,7 @@ function Cases({p, update, chill}){
   const [open, setOpen] = useState(null); const [game, setGame] = useState(null);
   const withFacts = CASES.filter(x=>!/^Not set out/.test(x.facts));
   const startGame = () => { const c = shuffle(withFacts)[0]; setGame({c, opts:shuffle([c.short, ...shuffle(CASES.filter(x=>x.id!==c.id)).slice(0,3).map(x=>x.short)]), pick:null, reveal:false}); };
-  return html`<div class="page"><div class="pagehead"><div class="kicker">Case Law Detective</div><h1>Prescribed cases · Unit 3</h1><p>Every case cited in the Unit 3 notes, with what the notes say about it. Where the notes don’t give the facts or ruling, that is stated rather than filled in.</p></div>
+  return html`<div class="page"><div class="pagehead"><div class="kicker">Case Law Detective</div><h1>Prescribed cases · Units 2 and 3</h1><p>Every case cited in the Unit 2 and Unit 3 notes, with what the notes say about it. Where the notes don’t give the facts or ruling, that is stated rather than filled in.</p></div>
     <div class="card detective">${!game ? html`<b>Detective round</b><p class="fine">You get the facts. Name the case, then recall its principle before the reveal.</p><${Btn} kind="primary" onClick=${startGame}>Start a round<//>`
       : html`<div class="kicker">The facts</div><p>${game.c.facts}</p><h3>Which case is this?</h3><div class="opts">${game.opts.map((o,i)=>{ const st= game.pick==null?'':(o===game.c.short?'right':(i===game.pick?'wrong':'dim'));
           return html`<button class=${'opt '+st} disabled=${game.pick!=null} onClick=${()=>{ setGame({...game, pick:i}); update(pp=>({...pp, xp:pp.xp+(o===game.c.short?8:2)})); }}><span class="L">${'ABCD'[i]}</span><span>${o}</span></button>`; })}</div>
@@ -633,7 +633,7 @@ function Cases({p, update, chill}){
 /* ---------- EXAM ---------- */
 function Exam({p, update, chill}){
   const [cur, setCur] = useState(null); const [text, setText] = useState(''); const [rev, setRev] = useState(false); const [ticks, setTicks] = useState({});
-  if(!cur) return html`<div class="page"><div class="pagehead"><div class="kicker">Exam practice</div><h1>Exam mode</h1><p>Practice questions written from the Unit 3 slides, each with a marking memo. They are not UWC past-paper questions, and the mark allocations are suggestions because no assessment information was included.</p></div>
+  if(!cur) return html`<div class="page"><div class="pagehead"><div class="kicker">Exam practice</div><h1>Exam mode</h1><p>Practice questions written from the Unit 2 study guide and Unit 3 slides, each with a marking memo. They are not UWC past-paper questions, and the mark allocations are suggestions because no assessment information was included.</p></div>
     <div class="files">${EXAM.map(e=>html`<button class="shopcard" onClick=${()=>{ setCur(e); setText(''); setRev(false); setTicks({}); }}><span class="kicker">${e.kind} · ${e.marks} marks</span><b>${e.q}</b></button>`)}</div></div>`;
   const got=Object.values(ticks).filter(Boolean).length;
   return html`<div class="page narrow"><div class="kicker">${cur.kind} · ${cur.marks} marks <${Demo}/></div><h2>${cur.q}</h2>
@@ -667,10 +667,10 @@ function Course(){
   return html`<div class="page narrow"><div class="pagehead"><div class="kicker">Course content</div><h1>What’s in Lawverse</h1></div>
     <div class="card"><b>Loaded from your UWC notes</b><ul class="plain">${TOPICS.map(t=>html`<li><b>Season ${t.season}: ${t.name}</b> <span class="fine">${t.vibe}</span>
       <ul class="plain">${SUBTOPICS.filter(s=>s.topicId===t.id).map(s=>html`<li>Episode ${s.ep}: ${s.name} <span class="fine">· ${s.source.doc}, ${s.source.loc} · ${nq(s.id)} questions</span></li>`)}</ul></li>`)}</ul>
-      <p class="fine">${Q.length} questions, ${CASES.length} cases, ${MYSTERIES.length} case files, ${SHOP.length} cart briefs, ${GLOWUP.length} answer builder and ${EXAM.length} exam questions. Every answer shows the slide it came from. Plain-English lines restate the slides and add no new law.</p></div>
+      <p class="fine">${Q.length} questions, ${CASES.length} cases, ${MYSTERIES.length} case files, ${SHOP.length} cart briefs, ${GLOWUP.length} answer builder${GLOWUP.length===1?'':'s'} and ${EXAM.length} exam questions. Every answer shows the slide or guide section it came from. Plain-English lines restate the slides and add no new law.</p></div>
     <div class="card"><b>Worth checking with your lecturer</b><p class="fine">Things in the notes that look unclear or inconsistent. The game shows them as written and avoids testing the unclear parts.</p>
       <ul class="plain">${REVIEW_FLAGS.map(f=>html`<li><b>${f.where}</b><br/><span class="fine">${f.note}</span></li>`)}</ul></div>
-    <div class="card"><b>Adding more units</b><p>Upload the next unit’s notes in the Claude conversation and ask for Lawverse to be updated. New seasons are added alongside Unit 3, and progress is kept because it is stored per question.</p>
+    <div class="card"><b>Adding more units</b><p>Upload the next unit’s notes in the Claude conversation and ask for Lawverse to be updated. New seasons are added in unit order, and progress is kept because it is stored per question.</p>
       <b>Update log</b><ul class="plain">${COURSE_META.log.map(l=>html`<li><span class="fine">${l.date}</span> ${l.note}</li>`)}</ul></div></div>`;
 }
 

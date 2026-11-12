@@ -1,6 +1,6 @@
 # LawLab
 
-**LAWVERSE: The PIL Diaries**, a study game for UWC Public International Law (Unit 3: international law and municipal law; justiciability and extra-territorial application).
+**LAWVERSE: The PIL Diaries**, a study game for UWC Public International Law (Unit 2: sources, treaties, custom, jus cogens and erga omnes; Unit 3: international law and municipal law, justiciability and extra-territorial application).
 
 It's a static web app with no build step and no server code.
 
