@@ -1,0 +1,21 @@
+# Render Blueprint: LawLab is a static site (plain HTML/CSS/JS, no build step).
+# In Render: New → Blueprint → pick this repo. Or New → Static Site with
+# Build Command blank (or `echo static`) and Publish Directory `.`.
+services:
+  - type: web
+    name: lawlab
+    runtime: static
+    buildCommand: echo "Static site, no build step"
+    staticPublishPath: .
+    pullRequestPreviewsEnabled: false
+    headers:
+      # Always revalidate app and content files so new courses/units show up right after a deploy.
+      - path: /*.js
+        name: Cache-Control
+        value: no-cache
+      - path: /*.css
+        name: Cache-Control
+        value: no-cache
+      - path: /index.html
+        name: Cache-Control
+        value: no-cache

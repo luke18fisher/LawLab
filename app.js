@@ -3,8 +3,25 @@
    ========================================================= */
 const ICON={"award": "<path d=\"m15.477 12.89 1.515 8.526a.5.5 0 0 1-.81.47l-3.58-2.687a1 1 0 0 0-1.197 0l-3.586 2.686a.5.5 0 0 1-.81-.469l1.514-8.526\" /> <circle cx=\"12\" cy=\"8\" r=\"6\" /> ", "book-open-text": "<path d=\"M12 7v14\" /> <path d=\"M16 12h2\" /> <path d=\"M16 8h2\" /> <path d=\"M3 18a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1h5a4 4 0 0 1 4 4 4 4 0 0 1 4-4h5a1 1 0 0 1 1 1v13a1 1 0 0 1-1 1h-6a3 3 0 0 0-3 3 3 3 0 0 0-3-3z\" /> <path d=\"M6 12h2\" /> <path d=\"M6 8h2\" /> ", "calendar-clock": "<path d=\"M21 7.5V6a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h3.5\" /> <path d=\"M16 2v4\" /> <path d=\"M8 2v4\" /> <path d=\"M3 10h5\" /> <path d=\"M17.5 17.5 16 16.3V14\" /> <circle cx=\"16\" cy=\"16\" r=\"6\" /> ", "chart-no-axes-column": "<line x1=\"18\" x2=\"18\" y1=\"20\" y2=\"10\" /> <line x1=\"12\" x2=\"12\" y1=\"20\" y2=\"4\" /> <line x1=\"6\" x2=\"6\" y1=\"20\" y2=\"14\" /> ", "circle-check": "<circle cx=\"12\" cy=\"12\" r=\"10\" /> <path d=\"m9 12 2 2 4-4\" /> ", "circle-help": "<circle cx=\"12\" cy=\"12\" r=\"10\" /> <path d=\"M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3\" /> <path d=\"M12 17h.01\" /> ", "circle-x": "<circle cx=\"12\" cy=\"12\" r=\"10\" /> <path d=\"m15 9-6 6\" /> <path d=\"m9 9 6 6\" /> ", "clapperboard": "<path d=\"M20.2 6 3 11l-.9-2.4c-.3-1.1.3-2.2 1.3-2.5l13.5-4c1.1-.3 2.2.3 2.5 1.3Z\" /> <path d=\"m6.2 5.3 3.1 3.9\" /> <path d=\"m12.4 3.4 3.1 4\" /> <path d=\"M3 11h18v8a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2Z\" /> ", "flame": "<path d=\"M8.5 14.5A2.5 2.5 0 0 0 11 12c0-1.38-.5-2-1-3-1.072-2.143-.224-4.054 2-6 .5 2.5 2 4.9 4 6.5 2 1.6 3 3.5 3 5.5a7 7 0 1 1-14 0c0-1.153.433-2.294 1-3a2.5 2.5 0 0 0 2.5 2.5z\" /> ", "folder-search": "<path d=\"M10.7 20H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h3.9a2 2 0 0 1 1.69.9l.81 1.2a2 2 0 0 0 1.67.9H20a2 2 0 0 1 2 2v4.1\" /> <path d=\"m21 21-1.9-1.9\" /> <circle cx=\"17\" cy=\"17\" r=\"3\" /> ", "gamepad-2": "<line x1=\"6\" x2=\"10\" y1=\"11\" y2=\"11\" /> <line x1=\"8\" x2=\"8\" y1=\"9\" y2=\"13\" /> <line x1=\"15\" x2=\"15.01\" y1=\"12\" y2=\"12\" /> <line x1=\"18\" x2=\"18.01\" y1=\"10\" y2=\"10\" /> <path d=\"M17.32 5H6.68a4 4 0 0 0-3.978 3.59c-.006.052-.01.101-.017.152C2.604 9.416 2 14.456 2 16a3 3 0 0 0 3 3c1 0 1.5-.5 2-1l1.414-1.414A2 2 0 0 1 9.828 16h4.344a2 2 0 0 1 1.414.586L17 18c.5.5 1 1 2 1a3 3 0 0 0 3-3c0-1.545-.604-6.584-.685-7.258-.007-.05-.011-.1-.017-.151A4 4 0 0 0 17.32 5z\" /> ", "graduation-cap": "<path d=\"M21.42 10.922a1 1 0 0 0-.019-1.838L12.83 5.18a2 2 0 0 0-1.66 0L2.6 9.08a1 1 0 0 0 0 1.832l8.57 3.908a2 2 0 0 0 1.66 0z\" /> <path d=\"M22 10v6\" /> <path d=\"M6 12.5V16a6 3 0 0 0 12 0v-3.5\" /> ", "house": "<path d=\"M15 21v-8a1 1 0 0 0-1-1h-4a1 1 0 0 0-1 1v8\" /> <path d=\"M3 10a2 2 0 0 1 .709-1.528l7-5.999a2 2 0 0 1 2.582 0l7 5.999A2 2 0 0 1 21 10v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z\" /> ", "lightbulb": "<path d=\"M15 14c.2-1 .7-1.7 1.5-2.5 1-.9 1.5-2.2 1.5-3.5A6 6 0 0 0 6 8c0 1 .2 2.2 1.5 3.5.7.7 1.3 1.5 1.5 2.5\" /> <path d=\"M9 18h6\" /> <path d=\"M10 22h4\" /> ", "link": "<path d=\"M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71\" /> <path d=\"M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71\" /> ", "list-music": "<path d=\"M21 15V6\" /> <path d=\"M18.5 18a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5Z\" /> <path d=\"M12 12H3\" /> <path d=\"M16 6H3\" /> <path d=\"M12 18H3\" /> ", "list-ordered": "<path d=\"M10 12h11\" /> <path d=\"M10 18h11\" /> <path d=\"M10 6h11\" /> <path d=\"M4 10h2\" /> <path d=\"M4 6h1v4\" /> <path d=\"M6 18H4c0-1 2-2 2-3s-1-1.5-2-1\" /> ", "message-circle": "<path d=\"M7.9 20A9 9 0 1 0 4 16.1L2 22Z\" /> ", "moon": "<path d=\"M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z\" /> ", "moon-star": "<path d=\"M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9\" /> <path d=\"M20 3v4\" /> <path d=\"M22 5h-4\" /> ", "pen-line": "<path d=\"M12 20h9\" /> <path d=\"M16.376 3.622a1 1 0 0 1 3.002 3.002L7.368 18.635a2 2 0 0 1-.855.506l-2.872.838a.5.5 0 0 1-.62-.62l.838-2.872a2 2 0 0 1 .506-.854z\" /> ", "play": "<polygon points=\"6 3 20 12 6 21 6 3\" /> ", "rotate-ccw": "<path d=\"M3 12a9 9 0 1 0 9-9 9.75 9.75 0 0 0-6.74 2.74L3 8\" /> <path d=\"M3 3v5h5\" /> ", "scale": "<path d=\"m16 16 3-8 3 8c-.87.65-1.92 1-3 1s-2.13-.35-3-1Z\" /> <path d=\"m2 16 3-8 3 8c-.87.65-1.92 1-3 1s-2.13-.35-3-1Z\" /> <path d=\"M7 21h10\" /> <path d=\"M12 3v18\" /> <path d=\"M3 7h2c2 0 5-1 7-2 2 1 5 2 7 2h2\" /> ", "settings": "<path d=\"M12.22 2h-.44a2 2 0 0 0-2 2v.18a2 2 0 0 1-1 1.73l-.43.25a2 2 0 0 1-2 0l-.15-.08a2 2 0 0 0-2.73.73l-.22.38a2 2 0 0 0 .73 2.73l.15.1a2 2 0 0 1 1 1.72v.51a2 2 0 0 1-1 1.74l-.15.09a2 2 0 0 0-.73 2.73l.22.38a2 2 0 0 0 2.73.73l.15-.08a2 2 0 0 1 2 0l.43.25a2 2 0 0 1 1 1.73V20a2 2 0 0 0 2 2h.44a2 2 0 0 0 2-2v-.18a2 2 0 0 1 1-1.73l.43-.25a2 2 0 0 1 2 0l.15.08a2 2 0 0 0 2.73-.73l.22-.39a2 2 0 0 0-.73-2.73l-.15-.08a2 2 0 0 1-1-1.74v-.5a2 2 0 0 1 1-1.74l.15-.09a2 2 0 0 0 .73-2.73l-.22-.38a2 2 0 0 0-2.73-.73l-.15.08a2 2 0 0 1-2 0l-.43-.25a2 2 0 0 1-1-1.73V4a2 2 0 0 0-2-2z\" /> <circle cx=\"12\" cy=\"12\" r=\"3\" /> ", "shopping-bag": "<path d=\"M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4Z\" /> <path d=\"M3 6h18\" /> <path d=\"M16 10a4 4 0 0 1-8 0\" /> ", "smartphone": "<rect width=\"14\" height=\"20\" x=\"5\" y=\"2\" rx=\"2\" ry=\"2\" /> <path d=\"M12 18h.01\" /> ", "sparkles": "<path d=\"M9.937 15.5A2 2 0 0 0 8.5 14.063l-6.135-1.582a.5.5 0 0 1 0-.962L8.5 9.936A2 2 0 0 0 9.937 8.5l1.582-6.135a.5.5 0 0 1 .963 0L14.063 8.5A2 2 0 0 0 15.5 9.937l6.135 1.581a.5.5 0 0 1 0 .964L15.5 14.063a2 2 0 0 0-1.437 1.437l-1.582 6.135a.5.5 0 0 1-.963 0z\" /> <path d=\"M20 3v4\" /> <path d=\"M22 5h-4\" /> <path d=\"M4 17v2\" /> <path d=\"M5 18H3\" /> ", "sun": "<circle cx=\"12\" cy=\"12\" r=\"4\" /> <path d=\"M12 2v2\" /> <path d=\"M12 20v2\" /> <path d=\"m4.93 4.93 1.41 1.41\" /> <path d=\"m17.66 17.66 1.41 1.41\" /> <path d=\"M2 12h2\" /> <path d=\"M20 12h2\" /> <path d=\"m6.34 17.66-1.41 1.41\" /> <path d=\"m19.07 4.93-1.41 1.41\" /> ", "target": "<circle cx=\"12\" cy=\"12\" r=\"10\" /> <circle cx=\"12\" cy=\"12\" r=\"6\" /> <circle cx=\"12\" cy=\"12\" r=\"2\" /> ", "timer": "<line x1=\"10\" x2=\"14\" y1=\"2\" y2=\"2\" /> <line x1=\"12\" x2=\"15\" y1=\"14\" y2=\"11\" /> <circle cx=\"12\" cy=\"14\" r=\"8\" /> ", "triangle-alert": "<path d=\"m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3\" /> <path d=\"M12 9v4\" /> <path d=\"M12 17h.01\" /> ", "trophy": "<path d=\"M6 9H4.5a2.5 2.5 0 0 1 0-5H6\" /> <path d=\"M18 9h1.5a2.5 2.5 0 0 0 0-5H18\" /> <path d=\"M4 22h16\" /> <path d=\"M10 14.66V17c0 .55-.47.98-.97 1.21C7.85 18.75 7 20.24 7 22\" /> <path d=\"M14 14.66V17c0 .55.47.98.97 1.21C16.15 18.75 17 20.24 17 22\" /> <path d=\"M18 2H6v7a6 6 0 0 0 12 0V2Z\" /> ", "volleyball": "<path d=\"M11.1 7.1a16.55 16.55 0 0 1 10.9 4\" /> <path d=\"M12 12a12.6 12.6 0 0 1-8.7 5\" /> <path d=\"M16.8 13.6a16.55 16.55 0 0 1-9 7.5\" /> <path d=\"M20.7 17a12.8 12.8 0 0 0-8.7-5 13.3 13.3 0 0 1 0-10\" /> <path d=\"M6.3 3.8a16.55 16.55 0 0 0 1.9 11.5\" /> <circle cx=\"12\" cy=\"12\" r=\"10\" /> "};
 
+Object.assign(ICON, {"layers": "<path d=\"m12.83 2.18a2 2 0 0 0-1.66 0L2.6 6.08a1 1 0 0 0 0 1.83l8.58 3.91a2 2 0 0 0 1.66 0l8.58-3.9a1 1 0 0 0 0-1.83Z\" /> <path d=\"m22 17.65-9.17 4.16a2 2 0 0 1-1.66 0L2 17.65\" /> <path d=\"m22 12.65-9.17 4.16a2 2 0 0 1-1.66 0L2 12.65\" /> ",
+  "arrow-right-left": "<path d=\"m16 3 4 4-4 4\" /> <path d=\"M20 7H4\" /> <path d=\"m8 21-4-4 4-4\" /> <path d=\"M4 17h16\" /> ",
+  "arrow-right": "<path d=\"M5 12h14\" /> <path d=\"m12 5 7 7-7 7\" /> "});
 const {useState, useEffect, useMemo, useRef, useCallback} = React;
 const html = htm.bind(React.createElement);
+
+/* ---------- courses ----------
+   Each content file registers one course in window.LAWVERSE_COURSES. The screens below read the
+   active course through these globals; activateCourse() swaps them before a render. */
+const COURSES = window.LAWVERSE_COURSES || {};
+const COURSE_ORDER = ['pub','con'].filter(k=>COURSES[k]).concat(Object.keys(COURSES).filter(k=>!['pub','con'].includes(k)));
+let COURSE, COURSE_META, REVIEW_FLAGS, TOPICS, SUBTOPICS, CASES, Q, MYSTERIES, SHOP, GLOWUP, PLAYLISTS, EXAM;
+function activateCourse(id){
+  const c = COURSES[id] || COURSES[COURSE_ORDER[0]];
+  if(c===COURSE) return;
+  COURSE=c; COURSE_META=c.meta; REVIEW_FLAGS=c.flags; TOPICS=c.TOPICS; SUBTOPICS=c.SUBTOPICS; CASES=c.CASES; Q=c.Q;
+  MYSTERIES=c.MYSTERIES; SHOP=c.SHOP; GLOWUP=c.GLOWUP; PLAYLISTS=c.PLAYLISTS; EXAM=c.EXAM;
+}
+activateCourse(COURSE_ORDER[0]);
 
 /* ---------- helpers ---------- */
 const DAY = 86400000;
@@ -22,7 +39,7 @@ const TYPE_LABEL = {mcq:'Choose', tf:'True or false', fill:'Fill the gap', recal
 const MASTERY = ['Not Started','Learning','Practising','Almost There','Mastered'];
 
 /* ---------- progress model ---------- */
-const BLANK = () => ({v:1, ts:0, name:'', look:'auto', chill:false, xp:0, items:{}, eps:{}, epStep:{}, mysteries:{}, shop:{}, glow:{}, netball:{matches:0, goals:0, best:0}, badges:{}, srs:[1,3,7], days:{}, dailyDone:'', events:[]});
+const BLANK = () => ({v:1, ts:0, name:'', look:'auto', chill:false, xp:0, items:{}, eps:{}, epStep:{}, mysteries:{}, shop:{}, glow:{}, netball:{matches:0, goals:0, best:0}, badges:{}, srs:[1,3,7], days:{}, dailyDone:'', daily:{}, course:'', events:[]});
 const LSKEY = 'lawverse-pil-v1';
 function loadLocal(){ try{ const s=localStorage.getItem(LSKEY); if(s) return {...BLANK(), ...JSON.parse(s)}; }catch(e){} return BLANK(); }
 function saveLocal(p){ try{ localStorage.setItem(LSKEY, JSON.stringify(p)); }catch(e){} }
@@ -59,6 +76,7 @@ function wrongItems(p){ return Q.filter(q=>p.items[q.id]?.lastWrong); }
 function levelOf(xp){ const L=Math.floor(xp/150)+1; const names=['Fresh Intern','Junior Associate','Candidate Attorney','Advocate','Senior Counsel','International Jurist']; return {L, name:names[Math.min(names.length-1,L-1)], into:xp%150, need:150}; }
 function streakDays(p){ let d=new Date(), s=0; for(;;){ const k=d.toISOString().slice(0,10); if(p.days[k]){ s++; d=new Date(d.getTime()-DAY); } else break; } return s; }
 
+const dailyToday = p => (p.daily||{})[COURSE.id]===today();
 const curItems = p => Q.filter(q=>p.items[q.id]).map(q=>p.items[q.id]);
 const epsDone = p => SUBTOPICS.filter(s=>p.eps[s.id]).length;
 const BADGES = [
@@ -240,7 +258,7 @@ function Home({p, go, update}){
     {k:'playlist', n:'Revision Mixes', s:'Shuffle your knowledge', d:'Warm-ups, case law, exam level and your mistakes.', ic:'list-music'},
   ];
   return html`<div class="home">
-    ${COURSE_META.notesLoaded ? html`<div class="notice"><b>Loaded from your UWC notes:</b> ${COURSE_META.loaded.join(' · ')}. Every answer links back to its source (slide or guide section). <button class="linkish" onClick=${()=>go('course')}>What’s included</button></div>` : html`<div class="notice"><b>Course Notes Not Yet Loaded.</b> Demo content only. <button class="linkish" onClick=${()=>go('course')}>How updates work</button></div>`}
+    ${COURSE_META.notesLoaded ? html`<div class="notice"><b>Loaded from your UWC notes:</b> ${COURSE_META.loaded.join(' · ')}. Every answer links back to the part of the notes it came from. <button class="linkish" onClick=${()=>go('course')}>What’s included</button> · <button class="linkish" onClick=${()=>go('courses')}>Switch course</button></div>` : html`<div class="notice"><b>Course Notes Not Yet Loaded.</b> Demo content only. <button class="linkish" onClick=${()=>go('course')}>How updates work</button></div>`}
     <section class="hero">
       <div class="herotxt"><div class="kicker">${greet}${p.name?', '+p.name:''}</div>
         <h1>Study the law. <em>Play the game.</em> Win the case.</h1>
@@ -254,7 +272,7 @@ function Home({p, go, update}){
         ${due>0 ? html`<h3>${due} question${due>1?'s':''} due for revision</h3><p>Spaced repetition says now is the best moment to recall these.</p><${Btn} kind="primary" onClick=${()=>go('review')}>Start revision<//>`
           : nextEp ? html`<h3>Watch “${nextEp.name}”</h3><p>${topicById(nextEp.topicId).name} · Episode ${nextEp.ep}</p><${Btn} kind="primary" onClick=${()=>go('episode',{sub:nextEp.id})}>Play episode<//>`
           : html`<h3>Everything watched</h3><p>Try Exam Era in the Playlist.</p><${Btn} kind="primary" onClick=${()=>go('playlist')}>Open playlists<//>`}
-        <div class="daily"><div><div class="kicker"><${Ic} n="flame" s=${15}/> Daily challenge</div><b>Daily Five · Swipe Cards</b><span class="fine">${p.dailyDone===today()?' · done today':' · 5 cards, about 4 minutes'}</span></div><${Btn} onClick=${()=>go('lawtok',{mode:'daily'})}>${p.dailyDone===today()?'Play again':'Play'}<//></div>
+        <div class="daily"><div><div class="kicker"><${Ic} n="flame" s=${15}/> Daily challenge</div><b>Daily Five · Swipe Cards</b><span class="fine">${dailyToday(p)?' · done today':' · 5 cards, about 4 minutes'}</span></div><${Btn} onClick=${()=>go('lawtok',{mode:'daily'})}>${dailyToday(p)?'Play again':'Play'}<//></div>
       </div>
     </section>
 
@@ -280,7 +298,7 @@ function Home({p, go, update}){
 
 /* ---------- LAWFLIX ---------- */
 function Lawflix({p, go}){
-  return html`<div class="page"><div class="pagehead"><div class="kicker">Episodes</div><h1>Units 2 and 3, as a series</h1><p>Each part of a unit is a season. Each key section of the notes is an episode. Pick one and press play.</p></div>
+  return html`<div class="page"><div class="pagehead"><div class="kicker">Episodes</div><h1>${COURSE.seriesTitle}</h1><p>Each unit is a season. Each key section of the notes is an episode. Pick one and press play.</p></div>
     ${TOPICS.map(t=>html`<section class="season"><div class="seasonhead"><h2>Season ${t.season}: ${t.name}</h2>${t.status==='demo'&&html`<${Demo}/>`}</div><p class="fine">${t.summary}</p>
       <div class="eprow">${SUBTOPICS.filter(s=>s.topicId===t.id).map(s=>html`<button class=${'epcard l-'+t.look} onClick=${()=>go('episode',{sub:s.id})}>
         <span class="epnum"><${Ic} n="play" s=${14}/> E${s.ep}</span><b>${s.name}</b><span class="fine">${s.episode.coldOpen.slice(0,90)}…</span>
@@ -290,7 +308,7 @@ function Lawflix({p, go}){
 function Season({p, go, topic}){ const t=topicById(topic);
   return html`<div class="page"><div class="pagehead"><div class="kicker">Season ${t.season} <${Demo}/></div><h1>${t.name}</h1><p>${t.summary}</p></div>
     <div class="eprow">${SUBTOPICS.filter(s=>s.topicId===t.id).map(s=>html`<div class=${'epcard static l-'+t.look}><span class="epnum">E${s.ep}</span><b>${s.name}</b>
-      <ul class="outcomes">${s.outcomes.map(o=>html`<li>${o}</li>`)}</ul><span class="fine">Source: ${s.source.doc}, ${s.source.loc} · ${s.source.via || 'UWC lecture slides'}</span>
+      <ul class="outcomes">${s.outcomes.map(o=>html`<li>${o}</li>`)}</ul><span class="fine">Source: ${s.source.doc}, ${s.source.loc} · ${s.source.via || 'UWC lecture notes'}</span>
       <div class="row"><${Btn} kind="primary" onClick=${()=>go('episode',{sub:s.id})}>Play<//><${MasteryPill} m=${masteryOf(p,s.id)}/></div></div>`)}</div></div>`;
 }
 
@@ -388,7 +406,7 @@ function MysteryRun({m, p, update, chill, onExit}){
 /* ---------- SHOP ---------- */
 function Shop({p, update, go}){
   const [sid, setSid] = useState(null);
-  if(!sid) return html`<div class="page"><div class="pagehead"><div class="kicker">Authority Cart</div><h1>Shop for your authorities</h1><p>Each brief is a client problem from Units 2 and 3. Add exactly the sections, cases, principles and facts it needs. Distractors look tempting.</p></div>
+  if(!sid) return html`<div class="page"><div class="pagehead"><div class="kicker">Authority Cart</div><h1>Shop for your authorities</h1><p>Each brief is a client problem from ${COURSE.scope}. Add exactly the sections, cases, principles and facts it needs. Distractors look tempting.</p></div>
     <div class="files">${SHOP.map(s=>html`<button class="shopcard" onClick=${()=>setSid(s.id)}><span class="kicker">Brief <${Demo}/></span><b>${s.title}</b><span class="fine">${s.items.length} items in store${p.shop[s.id]?' · best '+p.shop[s.id].best+' pts':''}</span></button>`)}</div></div>`;
   return html`<${ShopRun} s=${SHOP.find(x=>x.id===sid)} p=${p} update=${update} onExit=${()=>setSid(null)}/>`;
 }
@@ -546,7 +564,7 @@ function LawTok({p, update, chill, mode:startMode}){
   const touch = useRef(null);
   if(!feed) return html`<div class="page"><div class="pagehead"><div class="kicker">Swipe Cards</div><h1>Study in short bursts</h1><p>One card, one challenge. Answers stay hidden until you try. Every feed ends with a summary.</p></div>
     <div class="feedpick">
-      <button class="lenbtn" onClick=${()=>build('daily')}><b>Daily Five</b><span class="fine">Five cards. ${p.dailyDone===today()?'Done today.':'Not done yet today.'}</span></button>
+      <button class="lenbtn" onClick=${()=>build('daily')}><b>Daily Five</b><span class="fine">Five cards. ${dailyToday(p)?'Done today.':'Not done yet today.'}</span></button>
       <button class="lenbtn" onClick=${()=>build('mixed')}><b>Mixed revision</b><span class="fine">Shuffle across every topic</span></button>
       <button class="lenbtn" onClick=${()=>build('mistakes')} disabled=${!wrongItems(p).length}><b>Mistakes only</b><span class="fine">${wrongItems(p).length} card${wrongItems(p).length===1?'':'s'} waiting</span></button>
       <div class="lenbtn"><b>Topic feed</b><select id="tok-topic" value=${topic} onChange=${e=>setTopic(e.target.value)}>${TOPICS.map(t=>html`<option value=${t.id}>${t.name}</option>`)}</select><${Btn} kind="primary" onClick=${()=>build('topic')}>Start<//></div>
@@ -558,7 +576,7 @@ function LawTok({p, update, chill, mode:startMode}){
       <div class="row wrap center"><${Btn} kind="primary" onClick=${()=>setFeed(null)}>Pick another feed<//></div></div></div>`; }
   const card = feed[i];
   const canNext = card.teach || answered;
-  const goNext = () => { if(canNext){ if(i+1>=feed.length && mode==='daily' && p.dailyDone!==today()) update(pp=>({...pp, dailyDone:today(), xp:pp.xp+15})); setI(i+1); setAnswered(false); } };
+  const goNext = () => { if(canNext){ if(i+1>=feed.length && mode==='daily' && !dailyToday(p)) update(pp=>({...pp, dailyDone:today(), daily:{...(pp.daily||{}), [COURSE.id]:today()}, xp:pp.xp+15})); setI(i+1); setAnswered(false); } };
   return html`<div class="page tokwrap">
     <div class="tokphone" onTouchStart=${e=>touch.current=e.touches[0].clientY} onTouchEnd=${e=>{ const d=touch.current-e.changedTouches[0].clientY; if(d>60) goNext(); }}>
       <div class="tokprog">${feed.map((_,k)=>html`<i class=${k<i?'done':k===i?'on':''}></i>`)}</div>
@@ -584,7 +602,7 @@ function Playlist({p, update, chill}){
       <ol class="tracks">${t.map((q,k)=>html`<li><span class="tn">${k+1}</span><span class="tt"><b>${subById(q.sub).name}</b><span class="fine">${TYPE_LABEL[q.type]} · ${LEVELS[q.level]}</span></span><span class="fine">${p.items[q.id]?(p.items[q.id].lastWrong?'missed':'played'):''}</span></li>`)}</ol>
       ${!t.length && html`<p>No tracks yet. ${pl.special==='wrong'?'Nothing answered wrong so far.':'Answer a few questions first.'}</p>`}
       <${Btn} kind="ghost" onClick=${()=>setPl(null)}>All playlists<//></div>`; }
-  return html`<div class="page"><div class="pagehead"><div class="kicker">Revision Mixes</div><h1>Shuffle your knowledge</h1><p>Pick a mix. Each track is a question from Units 2 and 3.</p></div>
+  return html`<div class="page"><div class="pagehead"><div class="kicker">Revision Mixes</div><h1>Shuffle your knowledge</h1><p>Pick a mix. Each track is a question from ${COURSE.scope}.</p></div>
     <div class="playlists">${PLAYLISTS.map(l=>html`<button class="plcard" onClick=${()=>setPl(l)}><div class=${'cover c-'+l.cover}><span>${l.name}</span></div><b>${l.name}</b><span class="fine">${l.mood} · ${tracks(l).length} tracks</span></button>`)}</div></div>`;
 }
 
@@ -620,7 +638,7 @@ function Cases({p, update, chill}){
   const [open, setOpen] = useState(null); const [game, setGame] = useState(null);
   const withFacts = CASES.filter(x=>!/^Not set out/.test(x.facts));
   const startGame = () => { const c = shuffle(withFacts)[0]; setGame({c, opts:shuffle([c.short, ...shuffle(CASES.filter(x=>x.id!==c.id)).slice(0,3).map(x=>x.short)]), pick:null, reveal:false}); };
-  return html`<div class="page"><div class="pagehead"><div class="kicker">Case Law Detective</div><h1>Prescribed cases · Units 2 and 3</h1><p>Every case cited in the Unit 2 and Unit 3 notes, with what the notes say about it. Where the notes don’t give the facts or ruling, that is stated rather than filled in.</p></div>
+  return html`<div class="page"><div class="pagehead"><div class="kicker">Case Law Detective</div><h1>Prescribed cases · ${COURSE.scope}</h1><p>Every case cited in ${COURSE.notesLabel}, with what the notes say about it. Where the notes don’t give the facts or ruling, that is stated rather than filled in.</p></div>
     <div class="card detective">${!game ? html`<b>Detective round</b><p class="fine">You get the facts. Name the case, then recall its principle before the reveal.</p><${Btn} kind="primary" onClick=${startGame}>Start a round<//>`
       : html`<div class="kicker">The facts</div><p>${game.c.facts}</p><h3>Which case is this?</h3><div class="opts">${game.opts.map((o,i)=>{ const st= game.pick==null?'':(o===game.c.short?'right':(i===game.pick?'wrong':'dim'));
           return html`<button class=${'opt '+st} disabled=${game.pick!=null} onClick=${()=>{ setGame({...game, pick:i}); update(pp=>({...pp, xp:pp.xp+(o===game.c.short?8:2)})); }}><span class="L">${'ABCD'[i]}</span><span>${o}</span></button>`; })}</div>
@@ -633,7 +651,7 @@ function Cases({p, update, chill}){
 /* ---------- EXAM ---------- */
 function Exam({p, update, chill}){
   const [cur, setCur] = useState(null); const [text, setText] = useState(''); const [rev, setRev] = useState(false); const [ticks, setTicks] = useState({});
-  if(!cur) return html`<div class="page"><div class="pagehead"><div class="kicker">Exam practice</div><h1>Exam mode</h1><p>Practice questions written from the Unit 2 study guide and Unit 3 slides, each with a marking memo. They are not UWC past-paper questions, and the mark allocations are suggestions because no assessment information was included.</p></div>
+  if(!cur) return html`<div class="page"><div class="pagehead"><div class="kicker">Exam practice</div><h1>Exam mode</h1><p>Practice questions written from ${COURSE.notesLabel}, each with a marking memo. They are not UWC past-paper questions, and the mark allocations are suggestions because no assessment information was included.</p></div>
     <div class="files">${EXAM.map(e=>html`<button class="shopcard" onClick=${()=>{ setCur(e); setText(''); setRev(false); setTicks({}); }}><span class="kicker">${e.kind} · ${e.marks} marks</span><b>${e.q}</b></button>`)}</div></div>`;
   const got=Object.values(ticks).filter(Boolean).length;
   return html`<div class="page narrow"><div class="kicker">${cur.kind} · ${cur.marks} marks <${Demo}/></div><h2>${cur.q}</h2>
@@ -646,9 +664,10 @@ function Exam({p, update, chill}){
 }
 
 /* ---------- SETTINGS / COURSE ---------- */
-function Settings({p, update, sync, toast}){
+function Settings({p, update, sync, toast, go}){
   const [name, setName] = useState(p.name); const [srs, setSrs] = useState(p.srs.join(', ')); const [imp, setImp] = useState(''); const [confirm, setConfirm] = useState(false); const [exp, setExp] = useState('');
   return html`<div class="page narrow"><div class="pagehead"><div class="kicker">Make it yours</div><h1>Settings</h1></div>
+    <div class="card"><b>Course</b><p class="fine">You’re studying <b>${COURSE.code} · ${COURSE.name}</b>. Each course keeps its own progress; XP and level are shared.</p><${Btn} onClick=${()=>go('courses')}><${Ic} n="arrow-right-left" s=${17}/> Switch course<//></div>
     <div class="card"><label class="field">Your name<input id="set-name" value=${name} onInput=${e=>setName(e.target.value)} placeholder="What should Lawverse call you?"/></label><${Btn} onClick=${()=>{ update(pp=>({...pp, name:name.trim()})); toast('Saved'); }}>Save name<//></div>
     <div class="card"><b>Theme</b><div class="row wrap">${[['auto','Match my device'],['light','Lilac (light)'],['dark','Upside (dark mystery)']].map(([k,l])=>html`<${Btn} kind=${p.look===k?'primary':''} onClick=${()=>update(pp=>({...pp, look:k}))}>${l}<//>`)}</div>
       <label class="chk"><input type="checkbox" id="set-chill" checked=${p.chill} onChange=${e=>update(pp=>({...pp, chill:e.target.checked}))}/><span>Chill Mode: big buttons, no typing, no timers, short sessions</span></label></div>
@@ -659,12 +678,12 @@ function Settings({p, update, sync, toast}){
       ${exp && html`<textarea id="exp-box" rows="3" readonly value=${exp} onFocus=${e=>e.target.select()}></textarea>`}
       <label class="field">Import progress<textarea id="imp-box" rows="3" value=${imp} onInput=${e=>setImp(e.target.value)} placeholder="Paste exported progress here"></textarea></label>
       <${Btn} disabled=${!imp.trim()} onClick=${()=>{ try{ const d=JSON.parse(imp); if(!d.items) throw 0; update(()=>({...BLANK(), ...d})); setImp(''); toast('Progress imported'); }catch(e){ toast('That doesn’t look like Lawverse progress'); } }}>Import<//></div>
-    <div class="card danger"><b>Reset</b><p class="fine">Deletes all XP, answers and badges.</p>${!confirm?html`<${Btn} onClick=${()=>setConfirm(true)}>Reset progress…<//>`:html`<div class="row wrap"><${Btn} kind="danger" onClick=${()=>{ update(pp=>({...BLANK(), name:pp.name, look:pp.look})); setConfirm(false); toast('Progress reset'); }}>Yes, reset everything<//><${Btn} onClick=${()=>setConfirm(false)}>Cancel<//></div>`}</div>
+    <div class="card danger"><b>Reset</b><p class="fine">Deletes all XP, answers and badges in every course.</p>${!confirm?html`<${Btn} onClick=${()=>setConfirm(true)}>Reset progress…<//>`:html`<div class="row wrap"><${Btn} kind="danger" onClick=${()=>{ update(pp=>({...BLANK(), name:pp.name, look:pp.look, course:pp.course})); setConfirm(false); toast('Progress reset'); }}>Yes, reset everything<//><${Btn} onClick=${()=>setConfirm(false)}>Cancel<//></div>`}</div>
   </div>`;
 }
 function Course(){
   const nq = sub => Q.filter(q=>q.sub===sub).length;
-  return html`<div class="page narrow"><div class="pagehead"><div class="kicker">Course content</div><h1>What’s in Lawverse</h1></div>
+  return html`<div class="page narrow"><div class="pagehead"><div class="kicker">Course content · ${COURSE.code}</div><h1>What’s in ${COURSE.name}</h1></div>
     <div class="card"><b>Loaded from your UWC notes</b><ul class="plain">${TOPICS.map(t=>html`<li><b>Season ${t.season}: ${t.name}</b> <span class="fine">${t.vibe}</span>
       <ul class="plain">${SUBTOPICS.filter(s=>s.topicId===t.id).map(s=>html`<li>Episode ${s.ep}: ${s.name} <span class="fine">· ${s.source.doc}, ${s.source.loc} · ${nq(s.id)} questions</span></li>`)}</ul></li>`)}</ul>
       <p class="fine">${Q.length} questions, ${CASES.length} cases, ${MYSTERIES.length} case files, ${SHOP.length} cart briefs, ${GLOWUP.length} answer builder${GLOWUP.length===1?'':'s'} and ${EXAM.length} exam questions. Every answer shows the slide or guide section it came from. Plain-English lines restate the slides and add no new law.</p></div>
@@ -680,6 +699,33 @@ function Just5({p, update, go}){
   return html`<div class="page narrow chillzone"><${Session} title="Just 5 Minutes" kicker="Chill session · no timers" queue=${queue} p=${p} update=${update} chill=${true} onExit=${()=>go('home')}/></div>`;
 }
 
+/* ---------- COURSE PICKER ---------- */
+function courseStats(p, c){
+  const watched = c.SUBTOPICS.filter(s=>p.eps[s.id]).length;
+  const tried = c.Q.filter(q=>p.items[q.id]).length;
+  const due = c.Q.filter(q=>p.items[q.id] && p.items[q.id].due<=now()).length;
+  return {watched, eps:c.SUBTOPICS.length, tried, qs:c.Q.length, due, seasons:c.TOPICS.length};
+}
+function CoursePicker({p, onPick}){
+  const hour = new Date().getHours(); const greet = hour<12?'Good morning':hour<18?'Good afternoon':'Good evening';
+  return html`<div class="page picker">
+    <div class="pickhead"><div class="kicker"><${Ic} n="layers" s=${15}/> ${greet}${p.name?', '+p.name:''}</div>
+      <h1>Which course are we <em>opening</em>?</h1>
+      <p>Each course is its own world: its own seasons, case files, mixes and exam practice. XP and your level carry across. Switch any time from the course chip at the top of the screen.</p></div>
+    <div class="ctiles">${COURSE_ORDER.map((id,k)=>{ const c=COURSES[id]; const st=courseStats(p,c); const last=p.course===id;
+      return html`<button class=${'ctile t-'+c.look+(last?' last':'')} style=${{'--d':(k*-1.7)+'s'}} onClick=${()=>onPick(id)} aria-label=${'Open '+c.name}>
+        <span class="ctop"><span class="ccode">${c.code}</span>${last && html`<span class="pill soft">Last studied</span>`}</span>
+        <span class="cname">${c.name}</span>
+        <span class="ctag">${c.tagline}</span>
+        <span class="cblurb">${c.blurb}</span>
+        <span class="cbar" aria-hidden="true"><i style=${{width:(st.eps?st.watched/st.eps*100:0)+'%'}}></i></span>
+        <span class="cstats"><span><b>${st.seasons}</b> seasons</span><span><b>${st.watched}/${st.eps}</b> episodes</span><span><b>${st.tried}/${st.qs}</b> questions</span>${st.due>0 && html`<span class="cdue"><b>${st.due}</b> due</span>`}</span>
+        <span class="cgo">${last?'Continue':'Open course'} <${Ic} n="arrow-right" s=${18}/></span>
+      </button>`; })}
+      <div class="ctile add"><span class="ccode">+</span><span class="cname">Another course</span><span class="cblurb">Upload a new set of notes in the Claude conversation and ask for it to be added. It appears here as its own tile.</span></div>
+    </div></div>`;
+}
+
 /* ---------- APP SHELL ---------- */
 class Boundary extends React.Component{ constructor(p){ super(p); this.state={err:null}; }
   static getDerivedStateFromError(err){ return {err}; }
@@ -687,15 +733,19 @@ class Boundary extends React.Component{ constructor(p){ super(p); this.state={er
 const NAV = [{k:'home', l:'Home', ic:'house'},{k:'lawflix', l:'Episodes', ic:'clapperboard'},{k:'dashboard', l:'Progress', ic:'chart-no-axes-column'},{k:'cases', l:'Cases', ic:'scale'},{k:'settings', l:'Settings', ic:'settings'}];
 function App(){
   const [p, update, sync] = useProgress();
-  const [route, setRoute] = useState({v:'home', a:{}});
+  const [route, setRoute] = useState({v:'courses', a:{}});
   const [toastMsg, setToast] = useState(''); const tt=useRef(0);
   const toast = m => { setToast(m); clearTimeout(tt.current); tt.current=setTimeout(()=>setToast(''),2200); };
   const go = (v, a={}) => { setRoute({v, a, k:now()}); try{ window.scrollTo({top:0, behavior:'smooth'}); }catch(e){} };
   const lastBadges = useRef(Object.keys(p.badges).length);
   useEffect(()=>{ const n=Object.keys(p.badges).length; if(n>lastBadges.current){ const e=(p.events||[]).filter(x=>x.t==='badge').slice(-1)[0]; const b=e&&BADGES.find(x=>x.id===e.id); if(b) toast('Badge unlocked: '+b.name); } lastBadges.current=n; }, [p.badges]);
   useEffect(()=>{ const r=document.documentElement; r.classList.toggle('look-light', p.look==='light'); r.classList.toggle('look-dark', p.look==='dark'); r.classList.toggle('chill', !!p.chill); }, [p.look, p.chill]);
+  activateCourse(p.course || COURSE_ORDER[0]);
+  useEffect(()=>{ document.title = route.v==='courses' ? 'LAWVERSE · Choose a course' : 'LAWVERSE · '+COURSE.code+': '+COURSE.name; }, [route.v, COURSE.id]);
+  const pickCourse = id => { activateCourse(id); update(pp=>({...pp, course:id})); go('home'); };
   const chill = !!p.chill; const {v, a} = route;
   const views = {
+    courses: ()=>html`<${CoursePicker} p=${p} onPick=${pickCourse}/>`,
     home: ()=>html`<${Home} p=${p} go=${go} update=${update}/>`,
     lawflix: ()=>html`<${Lawflix} p=${p} go=${go}/>`,
     season: ()=>html`<${Season} p=${p} go=${go} topic=${a.topic}/>`,
@@ -709,14 +759,15 @@ function App(){
     dashboard: ()=>html`<${Dashboard} p=${p} go=${go}/>`,
     cases: ()=>html`<${Cases} p=${p} update=${update} chill=${chill}/>`,
     exam: ()=>html`<${Exam} p=${p} update=${update} chill=${chill}/>`,
-    settings: ()=>html`<${Settings} p=${p} update=${update} sync=${sync} toast=${toast}/>`,
+    settings: ()=>html`<${Settings} p=${p} update=${update} sync=${sync} toast=${toast} go=${go}/>`,
     course: ()=>html`<${Course}/>`,
     review: ()=>html`<div class="page narrow"><${Session} key=${route.k} title="Spaced revision" kicker="Due today" queue=${shuffle(dueItems(p)).map(q=>q.id)} p=${p} update=${update} chill=${chill} onExit=${()=>go('home')}/></div>`,
     just5: ()=>html`<${Just5} key=${route.k} p=${p} update=${update} go=${go}/>`,
   };
   return html`<div class="app">
-    <header class="top"><button class="brand" onClick=${()=>go('home')} aria-label="Lawverse home"><span class="logo" aria-hidden="true">L</span><span><b>LAWVERSE</b><small>The PIL Diaries</small></span></button>
-      <nav class="nav">${NAV.map(({k,l,ic})=>html`<button class=${v===k?'on':''} onClick=${()=>go(k)}><${Ic} n=${ic} s=${17}/>${l}</button>`)}</nav>
+    <header class="top"><button class="brand" onClick=${()=>go('home')} aria-label="Lawverse home"><span class="logo" aria-hidden="true">L</span><span class="brandtxt"><b>LAWVERSE</b><small>${v==='courses'?'Choose a course':COURSE.tagline}</small></span></button>
+      <button class=${'coursechip t-'+COURSE.look+(v==='courses'?' on':'')} onClick=${()=>go('courses')} aria-label=${'Current course '+COURSE.name+'. Switch course'} title="Switch course"><b>${COURSE.code}</b><span class="cc-name">${COURSE.name}</span><${Ic} n="arrow-right-left" s=${15}/></button>
+      <nav class="nav">${NAV.map(({k,l,ic})=>html`<button class=${v===k&&v!=='courses'?'on':''} onClick=${()=>go(k)}><${Ic} n=${ic} s=${17}/>${l}</button>`)}</nav>
       <div class="tools"><button class=${'chillbtn'+(chill?' on':'')} onClick=${()=>{ update(pp=>({...pp, chill:!pp.chill})); toast(chill?'Chill Mode off':'Chill Mode on: no timers, no typing'); }} aria-pressed=${chill}><${Ic} n="moon" s=${16}/> ${chill?'Chill on':'Chill'}</button>
         <button class="lookbtn" onClick=${()=>update(pp=>({...pp, look: pp.look==='dark'?'light':'dark'}))} aria-label="Toggle light or dark theme"><${Ic} n=${p.look==='dark'?'sun':'moon-star'} s=${17}/></button>
         <span class="xpchip"><${Ic} n="award" s=${15}/> ${p.xp} XP</span></div></header>

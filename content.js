@@ -1,5 +1,5 @@
 /* =====================================================================
-   LAWVERSE COURSE KNOWLEDGE BANK
+   LAWVERSE COURSE KNOWLEDGE BANK · PUB (Public International Law)
    Source of course content:
      "Public International Law 321, Unit 2: Context, Sources, Principles and Norms" study guide
       (20 pages, written from the Unit 2 slide decks, Parts 1 to 4). References give the guide section (§).
@@ -12,6 +12,8 @@
    Earlier demo topics were removed on request. Unit 2 (sources, treaties, custom, jus cogens) now comes from the study guide.
    ===================================================================== */
 
+window.LAWVERSE_COURSES = window.LAWVERSE_COURSES || {};
+(function(){
 const COURSE_META = {
   version: 2,
   notesLoaded: true,
@@ -21,7 +23,8 @@ const COURSE_META = {
   log: [
     {date:'2026-11-11', note:'First build with demo topics only.'},
     {date:'2026-11-11', note:'Added Unit 3 Part 1 (31 slides) and Unit 3 Part 2 (30 slides). Demo topics and demo questions removed. 14 episodes, 25 cases, 3 case files, 3 cart briefs, 1 answer builder and 5 exam questions written from the slides.'},
-    {date:'2026-11-12', note:'Added Unit 2 (Sources, Treaties, Custom and Norms) from the 20-page Unit 2 study guide as Seasons 1 and 2, before Unit 3 (now Seasons 3 and 4). 12 episodes, 72 questions, 19 new cases, 2 case files, 2 cart briefs and 4 exam questions. Existing North Sea and Petane case entries gained the facts given in Unit 2.'}
+    {date:'2026-11-12', note:'Added Unit 2 (Sources, Treaties, Custom and Norms) from the 20-page Unit 2 study guide as Seasons 1 and 2, before Unit 3 (now Seasons 3 and 4). 12 episodes, 72 questions, 19 new cases, 2 case files, 2 cart briefs and 4 exam questions. Existing North Sea and Petane case entries gained the facts given in Unit 2.'},
+    {date:'2026-11-20', note:'Each unit is now one season: Unit 2 is Season 1 (12 episodes) and Unit 3 is Season 2 (14 episodes). Episode and question ids are unchanged, so progress is kept.'}
   ]
 };
 
@@ -41,14 +44,10 @@ const U2 = s => `Unit 3 Part 2 (UWC slides), slide ${s}`;
 const G2 = s => `Unit 2 study guide, §${s}`;
 
 const TOPICS = [
-  {id:'u2a', season:1, status:'course', name:'Sources of International Law & Treaties', vibe:'Unit 2 · Article 38, the life of a treaty, reservations and termination',
-   look:'plum', summary:'Article 38(1) and the hierarchy question, what a treaty is, how treaties are made (and s 231), reservations, validity, termination, interpretation and succession.'},
-  {id:'u2b', season:2, status:'course', name:'Custom, Subsidiary Sources & Higher Norms', vibe:'Unit 2 · usus, opinio juris, jus cogens and erga omnes',
-   look:'mint', summary:'The two requirements for custom, the leading custom cases (Asylum, Lotus, North Sea, Nicaragua), evidence and the persistent objector, subsidiary sources and unilateral acts, and jus cogens and obligations erga omnes.'},
-  {id:'u3p1', season:3, status:'course', name:'International Law and Municipal Law', vibe:'Unit 3 Part 1 · how international law gets into South African law',
-   look:'lilac', summary:'Monism and dualism, the historical position, sections 231, 232 and 233, self-executing agreements, interpretation under s 39, judicial review and the executive certificate.'},
-  {id:'u3p2', season:4, status:'course', name:'Justiciability of Acts of State & Extra-Territorial Application', vibe:'Unit 3 Part 2 · when courts can review foreign-affairs decisions',
-   look:'blush', summary:'Non-justiciability before 1994, the constitutional framework after 1994, the key cases from Kolbatschenko to Kaunda, foreign act-of-state doctrines, and whether the Constitution applies outside South Africa.'},
+  {id:'u2a', season:1, status:'course', name:'Unit 2: Sources, Treaties, Custom and Norms', vibe:'Article 38, the life of a treaty, custom, subsidiary sources, jus cogens and erga omnes',
+   look:'plum', summary:'Article 38(1) and the hierarchy question; what a treaty is, how treaties are made (and s 231), reservations, validity, termination, interpretation and succession; the two requirements for custom and the leading custom cases (Asylum, Lotus, North Sea, Nicaragua); evidence and the persistent objector; subsidiary sources and unilateral acts; jus cogens and obligations erga omnes.'},
+  {id:'u3p1', season:2, status:'course', name:'Unit 3: International Law in South African Courts', vibe:'Part 1 · IL and municipal law · Part 2 · justiciability and extra-territorial application',
+   look:'lilac', summary:'Part 1: monism and dualism, the historical position, sections 231, 232 and 233, self-executing agreements, interpretation under s 39, judicial review and the executive certificate. Part 2: non-justiciability before 1994, the constitutional framework after 1994, the key cases from Kolbatschenko to Kaunda, foreign act-of-state doctrines, and whether the Constitution applies outside South Africa.'},
 ];
 
 const SUBTOPICS = [
@@ -139,9 +138,9 @@ const SUBTOPICS = [
    learn:[{h:'Three approaches',b:'Textual: literal or grammatical meaning (formalists, positivists). Teleological: object and purpose, giving maximum effect to the main purpose. Intention of the parties: from the text and travaux préparatoires; weak for multilateral treaties. Art 31 VCLT recognises textual and teleological. (Guide §5.3)'},
           {h:'Succession',b:'Change of government: no effect; continuity. Change in legal personality (annexation, decolonisation, dissolution, merger): universal succession (all treaties pass) or the clean slate doctrine (none pass). (Guide §5.4)'},
           {h:'Harksen (1998)',b:'The President consented to extradition under s 3(2) of the Extradition Act 67 of 1962, which applies only if there is no extradition agreement. The 1954 notes did not revive the 1872 agreement: no Allied High Commission consent (needed before 1955), and the notes were a proposal and counter-proposal, not an agreement. So s 3(2) applied. (Guide §5.4)'}],
-   teaser:'Season 2: the unwritten source. How does what states do become law?'}},
+   teaser:'Next: the unwritten source. How does what states do become law?'}},
  /* ---------------- UNIT 2 · SEASON 2: CUSTOM & HIGHER NORMS ---------------- */
- {id:'u2-custom', topicId:'u2b', ep:1, name:'Customary international law: usus and opinio juris', review:'from-notes',
+ {id:'u2-custom', topicId:'u2a', ep:7, name:'Customary international law: usus and opinio juris', review:'from-notes',
   outcomes:['State the two requirements for custom','List the four elements of usus and the standard','Explain codification, crystallisation and emergence, and the types of custom'],
   source:{doc:'Unit 2 study guide', loc:'§6', kind:'course', via:'Unit 2 study guide (from the slides)'},
   definition:'Custom (art 38(1)(b)) is “evidence of a general practice accepted as law” and is the oldest source. Two requirements must both be satisfied: usus (the behavioural element: a general or settled practice, by action or inaction) and opinio juris sive necessitatis (the psychological element: the practice is accepted as law, not just habit or courtesy). Usus: adopted by a number of states; more or less uniform; followed over a period of time; constant and uniform usage. A sufficiently widespread general practice is enough; universality is not required. Custom and treaties interact by codification, crystallisation and emergence. Custom may be general, regional (Asylum Case) or local (questioned; Nkondo).',
@@ -156,7 +155,7 @@ const SUBTOPICS = [
           {h:'Custom and treaties',b:'Codification: a treaty writes down existing custom. Crystallisation: a forming rule becomes settled through the treaty process. Emergence: a treaty rule becomes custom through later practice and acceptance, binding even non-parties (North Sea). (Guide §6.1)'},
           {h:'Types of custom',b:'General custom binds all states. Regional custom is recognised (Asylum Case). Local custom is questioned: in Nkondo the court relied on the Asylum Case and did not accept a small number of occurrences as custom. (Guide §6.2)'}],
    teaser:'Next: a refugee in an embassy and a collision on the high seas. Two cases that show how hard custom is to prove.'}},
- {id:'u2-al', topicId:'u2b', ep:2, name:'Asylum and Lotus: proving custom', review:'from-notes',
+ {id:'u2-al', topicId:'u2a', ep:8, name:'Asylum and Lotus: proving custom', review:'from-notes',
   outcomes:['Explain the facts and holding of the Asylum Case','Explain the facts and holding of the Lotus','State what each case teaches about custom'],
   source:{doc:'Unit 2 study guide', loc:'§7.1–7.2', kind:'course', via:'Unit 2 study guide (from the slides)'},
   definition:'Asylum Case (Colombia v Peru, ICJ 1950): Haya de la Torre was granted diplomatic asylum in the Colombian Embassy in Lima (January 1949). The ICJ held that Colombia could not unilaterally qualify the offence in a way binding on Peru, and Peru was not bound to give guarantees for safe departure; asylum had been granted in violation of the Havana Convention (1928). Cited for regional custom and for the point that few or inconsistent instances are not enough. Lotus (France v Turkey, PCIJ 1927): after a collision on the high seas, Turkey prosecuted the French officer on watch. France argued for exclusive flag-state jurisdiction, but its cases involved two ships flying the same flag. Held (majority): no rule of international law stopped Turkey; Turkey acted within the discretion international law leaves every sovereign state.',
@@ -170,7 +169,7 @@ const SUBTOPICS = [
           {h:'Asylum: held',b:'Both questions answered in the negative: Colombia could not unilaterally qualify the offence in a way binding on Peru, and Peru was not bound to give guarantees for safe departure. Peru had not proved he was a common criminal, but succeeded on its counter-claim that asylum breached the Havana Convention. Lesson: regional custom; few or inconsistent instances are not enough. (Guide §7.1)'},
           {h:'Lotus',b:'France claimed exclusive flag-state criminal jurisdiction on the high seas, but its cases involved two ships flying the same flag. Held (majority): no rule of international law prevented Turkey from prosecuting; Turkey acted within the discretion international law leaves every sovereign state. Lesson: you need practice and opinio juris; the psychological element is difficult. (Guide §7.2)'}],
    teaser:'Next: the leading case on how a treaty rule becomes custom, and a superpower in the dock.'}},
- {id:'u2-ns', topicId:'u2b', ep:3, name:'North Sea Continental Shelf and Nicaragua', review:'from-notes',
+ {id:'u2-ns', topicId:'u2a', ep:9, name:'North Sea Continental Shelf and Nicaragua', review:'from-notes',
   outcomes:['Explain the four steps of the Court’s reasoning in North Sea','State what is needed for a treaty rule to become custom','State the custom findings in Nicaragua'],
   source:{doc:'Unit 2 study guide', loc:'§7.3–7.4', kind:'course', via:'Unit 2 study guide (from the slides)'},
   definition:'North Sea Continental Shelf Cases (FRG v Denmark; FRG v Netherlands, ICJ, 20 February 1969, 11 votes to 6): (1) art 6 of the 1958 Convention on the Continental Shelf (equidistance) did not bind Germany as a treaty: it never ratified and there was no estoppel; (2) equidistance is not a necessary consequence of the shelf concept, which rests on natural prolongation; (3) equidistance was not custom: art 6 was not crystallising (reservations allowed to art 6), not norm-creating (primary duty to negotiate; special circumstances), too few ratifications, and about 15 cases without opinio juris; (4) delimitation by agreement in accordance with equitable principles. For a treaty rule to become custom: a norm-creating provision; widespread and representative participation including specially affected states; extensive and virtually uniform practice (even over a short period); and opinio juris. Nicaragua v US (ICJ 1986): acceptance of a practice as law cannot be presumed; the US breached customary duties not to intervene, not to use force, not to violate sovereignty and not to interrupt peaceful maritime commerce.',
@@ -185,7 +184,7 @@ const SUBTOPICS = [
           {h:'Equitable principles',b:'Delimit by agreement in accordance with equitable principles, leaving each party as much as possible of its natural prolongation, considering coastline configuration, geology, resources and reasonable proportionality. (Guide §7.3)'},
           {h:'Nicaragua (1986)',b:'Acceptance of a practice as law cannot be presumed. The US breached customary duties not to intervene (training, arming, financing and supplying the Contras), not to use force, not to violate sovereignty (overflights), and, by mining Nicaragua’s waters, not to interrupt peaceful maritime commerce. Collective self-defence rejected; cessation and reparation ordered. (Guide §7.4)'}],
    teaser:'Next: what counts as evidence of custom, and can a state opt out?'}},
- {id:'u2-obj', topicId:'u2b', ep:4, name:'Evidence of custom and the persistent objector', review:'from-notes',
+ {id:'u2-obj', topicId:'u2a', ep:10, name:'Evidence of custom and the persistent objector', review:'from-notes',
   outcomes:['List the evidence of state practice','State what is not custom','Distinguish persistent and subsequent objectors and use S v Petane'],
   source:{doc:'Unit 2 study guide', loc:'§8', kind:'course', via:'Unit 2 study guide (from the slides)'},
   definition:'Evidence of state practice: administrative actions and decisions; official statements and publications (e.g. Hansard, international conferences); contents of treaties; published records of state practice (e.g. the Southern African Yearbook of International Law). Not custom: a mere statement; a single or isolated action; a few or occasional occurrences (Nkondo); lack of passage of time, although short practice may suffice with the general consent of states (e.g. the 1962 UN General Assembly Outer Space Declaration). Persistent objector: objects from the start, continuously, and adopts a contrary practice: not bound. Subsequent objector: objects after the custom has formed: acting against it violates international law, though wider deviation may lead to a new custom; deviation from jus cogens is prohibited.',
@@ -200,7 +199,7 @@ const SUBTOPICS = [
           {h:'Objectors',b:'Persistent objector: objection at formation, continuous, with contrary practice: not bound. Subsequent objector: after formation: violates international law; others deviating may create a new custom; no deviation from jus cogens. (Guide §8.3)'},
           {h:'S v Petane (1988)',b:'Additional Protocol I art 1(4) was not customary: GA resolutions are doubtful as practice and, being mainly recommendatory, do not show opinio juris; little practice (only SA and Israel could be called “racist regimes”); not widely ratified compared with the four 1949 Geneva Conventions. SA became a party in 1995. (Guide §8.3)'}],
    teaser:'Next: the subsidiary sources, and how a minister’s words can bind a whole state.'}},
- {id:'u2-subsid', topicId:'u2b', ep:5, name:'Subsidiary sources and unilateral acts', review:'from-notes',
+ {id:'u2-subsid', topicId:'u2a', ep:11, name:'Subsidiary sources and unilateral acts', review:'from-notes',
   outcomes:['Explain general principles of law and why they are controversial','Explain the role of judicial decisions (art 59) and publicists','Explain unilateral acts using Eastern Greenland and Nuclear Tests'],
   source:{doc:'Unit 2 study guide', loc:'§9', kind:'course', via:'Unit 2 study guide (from the slides)'},
   definition:'General principles of law recognised by civilised nations (art 38(1)(c)): principles common to domestic legal systems, often from contract and corporate law; not based on state consensus, so their judicial acceptance can be controversial (Van Wyk J dissenting in South West Africa, 1966). Judicial decisions (art 38(1)(d)): by art 59 of the ICJ Statute a decision binds only the parties and that case, so stare decisis does not apply. Teachings of the most highly qualified publicists (art 38(1)(d)): e.g. Shaw, Schabas, Dugard, Strydom, Du Plessis, Maluwa, Tladi. Unilateral acts of states: not listed in art 38(1) but can create obligations (Eastern Greenland 1933; Nuclear Tests 1974).',
@@ -215,7 +214,7 @@ const SUBTOPICS = [
           {h:'Publicists',b:'The teachings of the most highly qualified publicists are aids to find and prove the law, e.g. Shaw, Schabas, Dugard, Strydom, Du Plessis, Maluwa, Tladi. (Guide §9)'},
           {h:'Unilateral acts',b:'Not in art 38(1), but can bind. Eastern Greenland (1933): the Norwegian Foreign Minister’s oral undertaking bound Norway. Nuclear Tests (1974): the French President’s public statement that testing would stop was held binding. (Guide §9)'}],
    teaser:'Next: norms so fundamental no treaty can override them, and obligations owed to everyone.'}},
- {id:'u2-jus', topicId:'u2b', ep:6, name:'Jus cogens and obligations erga omnes', review:'from-notes',
+ {id:'u2-jus', topicId:'u2a', ep:12, name:'Jus cogens and obligations erga omnes', review:'from-notes',
   outcomes:['Define jus cogens (art 53 VCLT) and give examples','Explain erga omnes and the shift from South West Africa to Barcelona Traction','Distinguish the two and describe South African practice'],
   source:{doc:'Unit 2 study guide', loc:'§10', kind:'course', via:'Unit 2 study guide (from the slides)'},
   definition:'Jus cogens (art 53 VCLT): a treaty is void if at its conclusion it conflicts with a peremptory norm of general international law, meaning a norm accepted and recognised by the international community of states as a whole as one from which no derogation is permitted, modifiable only by a later norm of the same character. Examples: prohibition of genocide, racial discrimination, slavery, torture, denial of self-determination, suppression of human rights, destruction of the environment; norms prohibiting the use of force or aggression. Obligations erga omnes: owed to the international community as a whole, in whose enforcement all states have an interest; recognised in Barcelona Traction (1970), repudiating the South West Africa (1966) requirement of a national interest. Together they moved international law from equal weight of norms to graduated normativity.',
@@ -229,7 +228,7 @@ const SUBTOPICS = [
           {h:'Erga omnes',b:'Obligations owed to the international community as a whole. South West Africa (1966): Ethiopia and Liberia had no standing without a national interest (President’s casting vote). Barcelona Traction (1970): the Court’s reasoning repudiated that approach by recognising obligations owed to all. Now no national interest is needed for standing. (Guide §10.2)'},
           {h:'The difference',b:'Jus cogens: higher-ranking, non-derogable; origin art 53 VCLT; conflicting treaties void, contrary reservations invalid. Erga omnes: owed to all; origin ICJ case law; removes the need to show a national interest. Effect: graduated normativity; jus cogens now limits state conduct generally; the list is not closed. (Guide §10.3)'},
           {h:'South Africa',b:'AZAPO v TRC (1996): obiter, Parliament could pass a law contrary to jus cogens; criticised by Dugard, who argues for harmonisation. DA v Minister (2017): Parliament decides whether SA stays bound. Rome Statute (Act 27 of 2002): SA committed to prosecute; an unconstitutional withdrawal attempt calls its commitment to peremptory norms into question. (Guide §10.4)'}],
-   teaser:'Season 3 (Unit 3): how does all this international law get into South African courts?'}},
+   teaser:'Season 2 (Unit 3): how does all this international law get into South African courts?'}},
  /* ---------------- UNIT 3 PART 1 ---------------- */
  {id:'u3-mono', topicId:'u3p1', ep:1, name:'Monism and dualism', review:'from-notes',
   outcomes:['Explain monism and the Doctrine of Incorporation','Explain dualism and the Doctrine of Transformation','Name the judicial theory linked to each'],
@@ -328,9 +327,9 @@ const SUBTOPICS = [
           {h:'Hierarchy',b:'An agreement has the status of its incorporating instrument: by Act → treated as an Act; by subordinate legislation → treated as subordinate legislation. (Slide 28)'},
           {h:'Non-incorporated agreements',b:'No direct force of law, but may be used to interpret an ambiguous statute and to challenge subordinate legislation as unreasonable. (Slide 29)'},
           {h:'Executive certificate',b:'Issued by the executive to regulate foreign relations, e.g. recognising states or governments, declaring or ending war, confirming or denying extradition, so government speaks with “one voice”. Courts may take it into account. Sources: statute and common-law prerogative powers. (Slide 30)'}],
-   teaser:'Season 4: can a court second-guess the executive’s dealings with other states?'}},
+   teaser:'Next, Part 2: can a court second-guess the executive’s dealings with other states?'}},
  /* ---------------- UNIT 3 PART 2 ---------------- */
- {id:'u3-just', topicId:'u3p2', ep:1, name:'Justiciability: before and after 1994', review:'from-notes',
+ {id:'u3-just', topicId:'u3p1', ep:8, name:'Justiciability: before and after 1994', review:'from-notes',
   outcomes:['State the pre-1994 Doctrine of Non-Justiciability and its authorities','Explain the post-1994 framework (trias politica, s 34, s 232)'],
   source:{doc:'Unit 3 Part 2', loc:'slides 2–4', kind:'course'},
   definition:'Pre-1994: English common law’s Doctrine of Non-Justiciability applied to acts of State within international law (Van Deventer v Hancke & Mossop; Haak v Minister of Internal Affairs). Post-1994: the separation of powers (trias politica) together with s 34 (“everyone has the right to have any dispute that can be resolved by the application of law decided in a fair public hearing”) creates a constitutional context in favour of judicial review; “dispute” is unqualified. An executive decision contrary to international custom can also be reviewed, provided the custom is not inconsistent with an Act or the Constitution.',
@@ -344,7 +343,7 @@ const SUBTOPICS = [
           {h:'Pre-1994',b:'English common law’s Doctrine of Non-Justiciability: Van Deventer v Hancke & Mossop 1903 TS 401 (Innes CJ); Haak v Minister of Internal Affairs 1942 AD 318. (Slide 3)'},
           {h:'Post-1994',b:'Trias politica + s 34 (unqualified “dispute”) = a constitutional framework for courts to intervene. Executive decisions contrary to custom can be reviewed if the custom is consistent with Acts and the Constitution. (Slide 4)'}],
    teaser:'Next: an Italian businessman, a Ciskei passport, a Franschhoek farm and a request to Liechtenstein.'}},
- {id:'u3-kolb', topicId:'u3p2', ep:2, name:'Kolbatschenko v King', review:'from-notes',
+ {id:'u3-kolb', topicId:'u3p1', ep:9, name:'Kolbatschenko v King', review:'from-notes',
   outcomes:['Explain the “high executive nature” category','State why the request to Liechtenstein was justiciable'],
   source:{doc:'Unit 3 Part 2', loc:'slides 5–11', kind:'course'},
   definition:'Kolbatschenko v King NO 2001 (4) SA 336 (CPD): courts are reluctant to evaluate foreign-relations decisions of a “high executive nature”, which are often so political that courts have “no judicial or manageable standards”. But there is no absolute rule of non-justiciability; accountability is a founding value; where individual rights and interests are affected, courts may intervene. The case did not involve matters of high executive nature, so the order was justiciable administrative decision-making.',
@@ -357,7 +356,7 @@ const SUBTOPICS = [
           {h:'The application',b:'The NDPP applied under s 2(2) of the International Co-operation in Criminal Matters Act 75 of 1996 for a letter of request to Liechtenstein. A judge must be satisfied of (a) reasonable grounds that an offence was committed (or need to determine this), (b) an investigation is being conducted, and (c) the information is necessary in the interests of justice. (Slides 9–10)'},
           {h:'The holding',b:'Courts refuse to evaluate decisions of a “high executive nature”, but there is no absolute rule of non-justiciability, accountability is a founding value, and courts may intervene where individual rights are affected. This case was not of high executive nature: justiciable. Order granted. (Slides 5, 10–11)'}],
    teaser:'Next: a deportation, a missing assurance about the death penalty, and a Constitutional Court ruling sent to New York.'}},
- {id:'u3-mohamed', topicId:'u3p2', ep:3, name:'Mohamed and Geuking', review:'from-notes',
+ {id:'u3-mohamed', topicId:'u3p1', ep:10, name:'Mohamed and Geuking', review:'from-notes',
   outcomes:['State the holding in Mohamed','Explain why the President’s extradition consent in Geuking is administrative action and its limits'],
   source:{doc:'Unit 3 Part 2', loc:'slides 12–14', kind:'course'},
   definition:'Mohamed v President of the RSA 2001 (3) SA 893 (CC): the CC reviewed the deportation to the USA of a Tanzanian national linked to the 1998 US Embassy bombing in Dar es Salaam; SA authorities violated the Constitution by not obtaining an assurance that the death penalty would not be imposed. Geuking v President of the RSA 2003 (3) SA 34 (CC): the President’s consent to an extradition request under s 3(2) of the Extradition Act 67 of 1962 is administrative action (s 33), but he does not examine the merits; it cannot be challenged for failing to consider a relevant factor (those belong at the magistrate’s enquiry under ss 9 and 10); a court intervenes only if he abuses the power or uses it contrary to the Constitution (para 27).',
@@ -370,7 +369,7 @@ const SUBTOPICS = [
           {h:'Geuking (CC, 2003)',b:'Executive powers in foreign affairs are not unlimited. The President’s consent under s 3(2) of the Extradition Act is administrative action under s 33, but only classifies a person as “liable to be surrendered”. (Slide 13)'},
           {h:'Limits of review',b:'It cannot be challenged for ignoring a relevant factor (those go to the magistrate’s enquiry, ss 9–10). Courts intervene only if the President abuses the power or uses it contrary to the Constitution (para 27). (Slide 14)'}],
    teaser:'Next: a hotel in Johannesburg, a First Lady, and a Minister’s immunity notice.'}},
- {id:'u3-da', topicId:'u3p2', ep:4, name:'DA v Minister of International Relations (Grace Mugabe)', review:'from-notes',
+ {id:'u3-da', topicId:'u3p1', ep:11, name:'DA v Minister of International Relations (Grace Mugabe)', review:'from-notes',
   outcomes:['State the three permissible sources of personal immunity','Explain why there was no customary norm and no derivative immunity','State the outcome'],
   source:{doc:'Unit 3 Part 2', loc:'slides 15–19', kind:'course'},
   definition:'Democratic Alliance v Minister of International Relations and Cooperation [2018] ZAGPPHC 534: the executive may grant personal immunity (immunity ratione personae) to a foreign official only if derived from (a) a norm of customary international law consistent with the Constitution, (b) a constitutionally compliant treaty, or (c) constitutionally compliant national legislation. There was no customary norm giving a head of state’s spouse immunity for the alleged offence (no general practice accepted as law by a majority of states). s 6(a) Foreign States Immunities Act 87 of 1981: no immunity in proceedings relating to death or injury of any person, so former President Mugabe himself would not have been immune; derivative immunity cannot exist without primary immunity. The Minister’s decision under s 7(2) of the Diplomatic Immunities and Privileges Act 37 of 2001 was unconstitutional and set aside.',
@@ -384,7 +383,7 @@ const SUBTOPICS = [
           {h:'No custom, no derivative immunity',b:'No general practice accepted as law gives a spouse such immunity. Under s 6(a) FSIA (death or injury) the President himself would not have been immune, so his spouse could not be either. (Slides 17–18)'},
           {h:'Outcome',b:'“A fundamental and fatal error of law.” Dr Mugabe was not immune; the decision was unconstitutional and unlawful and was set aside (Valli J, para 43). (Slides 18–19)'}],
    teaser:'Next: when South Africans abroad ask their government for protection. Can a court make the government act?'}},
- {id:'u3-vonabo', topicId:'u3p2', ep:5, name:'Von Abo, Kaunda and refusals to review', review:'from-notes',
+ {id:'u3-vonabo', topicId:'u3p1', ep:12, name:'Von Abo, Kaunda and refusals to review', review:'from-notes',
   outcomes:['Trace Von Abo through the High Court and SCA','State the Kaunda position on discretion and bad faith','List categories courts refused to review'],
   source:{doc:'Unit 3 Part 2', loc:'slides 20–22', kind:'course'},
   definition:'Von Abo: the government failed for six years to provide diplomatic protection to a South African whose Zimbabwean farms were seized without compensation. Prinsloo J found a “shocking dereliction of duty” (para 41), irrational and bad-faith conduct (para 143), and a constitutional duty to protect; the SCA (2011) upheld the appeal because Von Abo failed to establish entitlement to diplomatic protection. Kaunda (CC, 2005): government decisions are subject to constitutional control, but weight is given to the government’s responsibility and expertise in foreign affairs, giving a wide discretion (para 144); bad-faith decisions can be reviewed, but the CC refused to order protection for nationals detained in Zimbabwe and Equatorial Guinea. Courts have refused to review acts of “high executive nature” (Inter-Science) and protection of nationals abroad (Kaunda).',
@@ -398,7 +397,7 @@ const SUBTOPICS = [
           {h:'Kaunda (CC, 2005)',b:'Decisions are subject to constitutional control, but government has a wide discretion in foreign affairs (para 144). Bad-faith decisions are reviewable, but the CC refused to order protection for nationals detained in Zimbabwe and Equatorial Guinea. (Slide 22)'},
           {h:'Refused categories',b:'Acts of “high executive nature” (Inter-Science) and protection of nationals abroad (Kaunda). (Slide 21)'}],
    teaser:'Next: how the USA and the UK treat acts of foreign governments, and whether SA must follow.'}},
- {id:'u3-foreign', topicId:'u3p2', ep:6, name:'Acts of foreign governments', review:'from-notes',
+ {id:'u3-foreign', topicId:'u3p1', ep:13, name:'Acts of foreign governments', review:'from-notes',
   outcomes:['Explain the US act of state doctrine (Underhill)','Explain the UK doctrine of judicial restraint and Kuwait Airways','Explain why neither binds SA, and the criticism of Swissborough'],
   source:{doc:'Unit 3 Part 2', loc:'slides 23–26', kind:'course'},
   definition:'USA: the “act of state doctrine”, a policy of judicial restraint: “the courts of one country will not sit in judgment on the acts of the government of another done within its own territory” (Underhill v Hernandes, Fuller CJ). UK: the “doctrine of judicial restraint”, but human rights law changed the House of Lords’ approach in Kuwait Airways v Iraqi Airways [2002] UKHL 19 (cited with approval in Van Zyl v Government of the RSA). Both doctrines are principles of domestic law on foreign relations, not rules of international law, so they do not bind SA; SA courts may follow them only within the terms of ss 34 and 232. Swissborough Diamond Mines v Government of the RSA 1999 (2) SA 279 (T): Joffe J did not mention the Constitution and found the matter non-justiciable.',
@@ -412,7 +411,7 @@ const SUBTOPICS = [
           {h:'Not binding on SA',b:'Both are domestic principles on foreign relations, not international law. SA courts may follow them only within ss 34 and 232. (Slide 25)'},
           {h:'Swissborough',b:'Joffe J ignored the Constitution and held the alleged Lesotho–SA conspiracy over diamond leases non-justiciable, as it “belonged” to international law. An example of courts not invoking the Constitution. (Slide 26)'}],
    teaser:'Final episode: if officials in Pretoria cause harm in New York, does the Constitution follow them there?'}},
- {id:'u3-extra', topicId:'u3p2', ep:7, name:'Extra-territorial application of the Constitution', review:'from-notes',
+ {id:'u3-extra', topicId:'u3p1', ep:14, name:'Extra-territorial application of the Constitution', review:'from-notes',
   outcomes:['Answer whether the Constitution applies outside SA','Explain the “trigger” reasoning in Mohamed','Use Kaunda to confirm the rule'],
   source:{doc:'Unit 3 Part 2', loc:'slides 27–29', kind:'course'},
   definition:'The 1996 Constitution has only territorial application, confirming a general rule of international law. In Mohamed the harm in the US was caused by SA officials acting in SA: the Bill of Rights was “triggered” by effects abroad that began with conduct in SA. Kaunda confirmed there is no extra-territorial application, so the CC refused to order constitutional protection for nationals detained abroad.',
@@ -842,3 +841,11 @@ const EXAM = [
   {id:'e4', marks:6, kind:'Problem / discussion', q:'Does the 1996 Constitution have extra-territorial application? Refer to Mohamed and Kaunda.', memo:['Answer: no, only territorial application','Mohamed facts: deportation to US, no death-penalty assurance','Harm abroad caused by SA officials acting in SA','Bill of Rights “triggered” by effects abroad','Kaunda confirms no extra-territorial application; no order','Confirms a general rule of international law'], src:U2('12, 22, 27–29')},
   {id:'e5', marks:8, kind:'Essay', q:'Are acts of State in the realm of foreign relations justiciable in South Africa? Discuss the position before and after 1994.', memo:['Pre-1994: Doctrine of Non-Justiciability (Van Deventer; Haak)','Post-1994: trias politica and s 34 (unqualified “dispute”)','Review of decisions contrary to custom (s 232 limits)','Kolbatschenko: no absolute rule; high executive nature; justiciable','Mohamed / Geuking: executive powers not unlimited','DA v Minister: decision set aside','Kaunda / Von Abo SCA: wide discretion; refusals','Foreign doctrines not binding; Swissborough criticised'], src:U2('3–26')},
 ];
+
+LAWVERSE_COURSES.pub = {
+  id:'pub', code:'PUB', name:'Public International Law', tagline:'The PIL Diaries', look:'lilac',
+  blurb:'Sources, treaties, custom and higher norms; international law in South African courts; justiciability and extra-territorial reach.',
+  scope:'Units 2 and 3', seriesTitle:'Units 2 and 3, as a series', notesLabel:'the Unit 2 study guide and Unit 3 slides',
+  meta:COURSE_META, flags:REVIEW_FLAGS, TOPICS, SUBTOPICS, CASES, Q, MYSTERIES, SHOP, GLOWUP, PLAYLISTS, EXAM
+};
+})();
