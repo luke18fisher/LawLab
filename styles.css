@@ -348,3 +348,53 @@ ul.plain{list-style:none;padding:0;margin:6px 0 12px}ul.plain li{padding:4px 0;b
 @media (prefers-reduced-motion: reduce){ *{animation:none!important;transition:none!important} }
 .ico{flex:none;vertical-align:middle}
 .epnum{display:inline-flex;align-items:center;gap:4px}
+
+/* ---------- course picker: tiled floating tabs ---------- */
+.picker{position:relative}
+.picker::before{content:"";position:absolute;inset:-40px -16px auto;height:420px;z-index:-1;pointer-events:none;
+  background:radial-gradient(40% 60% at 15% 20%,color-mix(in srgb,var(--lilac) 22%,transparent),transparent 70%),radial-gradient(40% 60% at 85% 40%,color-mix(in srgb,var(--mint) 18%,transparent),transparent 70%)}
+.pickhead{max-width:720px;margin:12px auto 44px;text-align:center}
+.pickhead .kicker{justify-content:center}
+.pickhead h1 em{font-style:italic;color:var(--neon)}
+.pickhead p{color:var(--ink2)}
+.ctiles{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,320px),1fr));gap:30px;max-width:1080px;margin:0 auto;padding-bottom:24px}
+.ctile{--acc:var(--lilac);--acc2:var(--lilac2);position:relative;text-align:left;display:flex;flex-direction:column;gap:8px;padding:28px;border-radius:28px;
+  border:1.5px solid color-mix(in srgb,var(--acc) 45%,var(--line));
+  background:radial-gradient(120% 90% at 100% 0%,color-mix(in srgb,var(--acc) 26%,transparent),transparent 60%),linear-gradient(170deg,var(--acc2),var(--card) 65%);
+  box-shadow:0 26px 46px -30px color-mix(in srgb,var(--acc) 85%,transparent),0 2px 0 0 color-mix(in srgb,var(--acc) 30%,transparent);
+  animation:floaty 7s ease-in-out infinite;animation-delay:var(--d,0s);transition:box-shadow .25s, border-color .25s, translate .25s;min-height:340px}
+.ctile:hover,.ctile:focus-visible{translate:0 -8px;border-color:var(--acc);box-shadow:0 40px 60px -30px color-mix(in srgb,var(--acc) 95%,transparent),0 2px 0 0 var(--acc)}
+.ctile:active{translate:0 -2px}
+@keyframes floaty{0%,100%{transform:translateY(0) rotate(-.4deg)}50%{transform:translateY(-10px) rotate(.4deg)}}
+.ctile.t-mint{--acc:var(--mint);--acc2:color-mix(in srgb,var(--mint) 16%,var(--card))}
+.ctile.t-blush{--acc:var(--blush);--acc2:var(--blush2)}
+.ctile.t-gold{--acc:var(--gold);--acc2:color-mix(in srgb,var(--gold) 16%,var(--card))}
+.ctile.last{outline:2px solid var(--acc);outline-offset:6px}
+.ctop{display:flex;justify-content:space-between;align-items:center;gap:10px}
+.ccode{font-family:var(--f-mono);font-weight:500;font-size:15px;letter-spacing:.3em;padding:6px 12px 6px 14px;border-radius:12px;background:var(--acc);color:#fff;box-shadow:0 0 22px -6px var(--acc)}
+.t-mint .ccode{color:#06231d}
+.cname{font-family:var(--f-display);font-size:clamp(26px,3.4vw,34px);line-height:1.08;margin-top:10px}
+.ctag{font-family:var(--f-mono);font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--ink2)}
+.cblurb{font-size:15px;color:var(--ink2)}
+.cbar{height:7px;border-radius:9px;background:color-mix(in srgb,var(--ink) 9%,transparent);overflow:hidden;margin-top:auto}
+.cbar i{display:block;height:100%;border-radius:9px;background:var(--acc)}
+.cstats{display:flex;flex-wrap:wrap;gap:6px 14px;font-size:13px;color:var(--mute)}
+.cstats b{color:var(--ink);font-variant-numeric:tabular-nums}
+.cdue{color:var(--neon)}.cdue b{color:var(--neon)}
+.cgo{display:inline-flex;align-items:center;gap:8px;font-weight:600;align-self:flex-start;margin-top:6px;padding:10px 18px;border-radius:999px;background:var(--plum);color:var(--onplum)}
+.ctile.add{border-style:dashed;background:transparent;box-shadow:none;animation:none;min-height:220px;justify-content:center;align-items:flex-start;--acc:var(--line)}
+.ctile.add .ccode{background:transparent;color:var(--mute);border:1.5px dashed var(--line);box-shadow:none}
+.ctile.add .cname{font-size:24px}
+
+/* header course chip (visible on every screen) */
+.coursechip{--acc:var(--lilac);display:inline-flex;align-items:center;gap:8px;border:1.5px solid color-mix(in srgb,var(--acc) 55%,var(--line));background:color-mix(in srgb,var(--acc) 14%,var(--card));border-radius:999px;padding:5px 12px 5px 5px;font-size:14px;max-width:280px;min-width:0}
+.coursechip b{font-family:var(--f-mono);font-weight:500;letter-spacing:.18em;font-size:12px;padding:4px 8px 4px 10px;border-radius:999px;background:var(--acc);color:#fff}
+.coursechip.t-mint{--acc:var(--mint)}.coursechip.t-mint b{color:#06231d}
+.coursechip .cc-name{white-space:nowrap;overflow:hidden;text-overflow:ellipsis;min-width:0;color:var(--ink2)}
+.coursechip:hover{border-color:var(--acc)}
+.coursechip.on{box-shadow:0 0 0 2px var(--acc)}
+@media (max-width:1100px){ .coursechip .cc-name{display:none} .coursechip{padding-right:10px} }
+@media (max-width:520px){ .brandtxt{display:none} .chillbtn{font-size:0;gap:0;padding:7px 10px} .chillbtn .ico{font-size:14px} .top{gap:10px} }
+
+/* extra season look for new courses */
+.l-gold{background:linear-gradient(170deg,color-mix(in srgb,var(--gold) 16%,var(--card)),var(--card) 70%)}
